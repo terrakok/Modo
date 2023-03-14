@@ -45,8 +45,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 class SampleScreen(
     private val i: Int,
-    override val screenKey: ScreenKey = generateScreenKey()
-) : Screen {
+) : Screen(screenKey = generateScreenKey()) {
 
     @Composable
     override fun Content() {

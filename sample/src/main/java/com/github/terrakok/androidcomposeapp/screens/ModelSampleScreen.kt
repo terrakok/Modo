@@ -18,9 +18,7 @@ import kotlinx.coroutines.launch
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class ModelSampleScreen(
-    override val screenKey: ScreenKey = generateScreenKey()
-) : Screen {
+class ModelSampleScreen : Screen(screenKey = generateScreenKey()) {
 
     @Composable
     override fun Content() {

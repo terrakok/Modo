@@ -11,7 +11,6 @@ import androidx.compose.ui.unit.dp
 import com.github.terrakok.modo.DialogScreen
 import com.github.terrakok.modo.ExperimentalModoApi
 import com.github.terrakok.modo.LocalContainerScreen
-import com.github.terrakok.modo.ScreenKey
 import com.github.terrakok.modo.generateScreenKey
 import com.github.terrakok.modo.stack.StackScreen
 import kotlinx.parcelize.Parcelize
@@ -20,8 +19,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 class SampleDialog(
     private val i: Int,
-    override val screenKey: ScreenKey = generateScreenKey()
-) : DialogScreen {
+) : DialogScreen(screenKey = generateScreenKey()) {
 
     @Composable
     override fun Content() {

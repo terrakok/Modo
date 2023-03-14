@@ -33,9 +33,7 @@ import kotlinx.parcelize.Parcelize
 import kotlin.random.Random
 
 @Parcelize
-class SaveableStateHolderDemoScreen(
-    override val screenKey: ScreenKey = generateScreenKey()
-) : Screen {
+class SaveableStateHolderDemoScreen : Screen(screenKey = generateScreenKey()) {
 
     @Composable
     override fun Content() {
@@ -77,7 +75,11 @@ private fun ScreenContent() {
 //                    .weight(1f)
 //                    .fillMaxWidth()
 //            )
-        BottomBar(screens1.size, selectedPos, changeDisplayTypeClick = { showAllStacks = !showAllStacks }, onTabClick = { selectedPos = it })
+        BottomBar(
+            screens1.size,
+            selectedPos,
+            changeDisplayTypeClick = { showAllStacks = !showAllStacks },
+            onTabClick = { selectedPos = it })
     }
 
 }

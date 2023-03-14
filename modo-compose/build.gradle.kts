@@ -39,6 +39,8 @@ dependencies {
     // For BackHandler
     implementation("androidx.activity:activity-compose:${properties["version.composeActivity"]}")
     implementation("org.jetbrains.kotlin:kotlin-parcelize-runtime:${properties["version.kotlin"]}")
+    // For LocalViewModelStoreOwner
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:${properties["version.lifecycle"]}")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }

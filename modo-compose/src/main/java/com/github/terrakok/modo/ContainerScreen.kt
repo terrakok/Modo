@@ -10,14 +10,12 @@ val LocalContainerScreen = staticCompositionLocalOf<ContainerScreen<*>> { error(
 
 abstract class ContainerScreen<State : NavigationState>(
     private val navModel: NavModel<State>
-) : Screen, NavigationContainer<State> by navModel {
+) : Screen(navModel.screenKey), NavigationContainer<State> by navModel {
 
     abstract val reducer: NavigationReducer<State>
 
     internal val renderer: NavigationRenderer<State>?
         get() = navModel.renderer
-
-    final override val screenKey: ScreenKey = navModel.screenKey
 
     init {
         navModel.init(

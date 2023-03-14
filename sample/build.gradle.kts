@@ -42,6 +42,6 @@ dependencies {
     implementation("androidx.compose.ui:ui:${properties["version.compose"]}")
     implementation("androidx.compose.material:material:${properties["version.material"]}")
     implementation("androidx.compose.ui:ui-tooling:${properties["version.compose"]}")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:${properties["version.lifecycleRuntimeKtx"]}")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:${properties["version.lifecycle"]}")
     implementation("androidx.activity:activity-compose:${properties["version.composeActivity"]}")
 }

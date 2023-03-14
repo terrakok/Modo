@@ -24,9 +24,7 @@ import com.github.terrakok.modo.stack.StackScreen
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class ListScreen(
-    override val screenKey: ScreenKey = generateScreenKey()
-) : Screen {
+class ListScreen: Screen(screenKey = generateScreenKey()) {
 
     @Composable
     override fun Content() {
@@ -44,10 +42,10 @@ class ListScreen(
             ) {
                 items((1..100).toList()) {
                     Text(text = "Item $it",
-                         Modifier
-                             .fillMaxWidth()
-                             .clickable { conScreen.forward(DetailsScreen(it.toString())) }
-                             .padding(16.dp))
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { conScreen.forward(DetailsScreen(it.toString())) }
+                            .padding(16.dp))
                 }
             }
         }
@@ -57,8 +55,7 @@ class ListScreen(
 @Parcelize
 class DetailsScreen(
     private val userId: String,
-    override val screenKey: ScreenKey = generateScreenKey()
-) : Screen {
+) : Screen(screenKey = generateScreenKey()) {
 
     @Composable
     override fun Content() {
